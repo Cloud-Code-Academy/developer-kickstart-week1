@@ -171,12 +171,14 @@ public class VariablesDataTypesOperatorsTest {
     @IsTest
     static void testCalculateWeeklyPaycheck() {
         Assert.areEqual(400.0, VariablesDataTypesOperators.calculateWeeklyPaycheck(40.0, (Double)10.0), 'Incorrect weekly paycheck for 40.0 rate and 10.0 hours');
+        Assert.areEqual(896.375, VariablesDataTypesOperators.calculateWeeklyPaycheck(35.5, (Double)25.25), 'Incorrect weekly paycheck for 35.5 rate and 25.25 hours');
         Assert.areEqual(0.0, VariablesDataTypesOperators.calculateWeeklyPaycheck(0.0, (Double)10.0), 'Incorrect weekly paycheck for 0.0 rate and 10.0 hours');
     }
 
     @IsTest
     static void testCalculateMonthlyPaycheck() {
         Assert.areEqual(1600.0, VariablesDataTypesOperators.calculateMonthlyPaycheck(40.0, (Double)10.0), 'Incorrect monthly paycheck for 40.0 rate and 10.0 hours');
+        Assert.areEqual(3585.5, VariablesDataTypesOperators.calculateMonthlyPaycheck(35.5, (Double)25.25), 'Incorrect monthly paycheck for 35.5 rate and 25.25 hours');
         Assert.areEqual(0.0, VariablesDataTypesOperators.calculateMonthlyPaycheck(0.0, (Double)10.0), 'Incorrect monthly paycheck for 0.0 rate and 10.0 hours');
     }
 
